@@ -18,14 +18,30 @@
         اللي إنت اتابعها Animeتحتوي على مسلسلات ال myAnime المصفوفة الأولى
         اللي رفيجك يتابعها Animeتحتوي على مسلسلات ال myFriendAnime المصفوفة الثانية
       */
-
+      let myAnime = [`Death Note`, `Dragon Ball`, `lofy`, `konan`];
+      let myFriendAnime = [`Anime1`, `Anime2`, `Dath Note`, `konan`];
       // 2
       // mutualAnime عرف مصفوفة فاضية سمها
-
+      let mutualAnime = [];
       // mutualAnimeقارن المصفوفتين وضيف المسلسلات المشتركة ل
 
-      // consoleفي ال mutualAnime اطبع
+      for (let index = 0; index < myAnime.length; index++) {
+        const element = myAnime[index];
+        console.log(element);
 
+      for (let index1 = 0; index1 < myFriendAnime.length; index1++) {
+        const element1 =myFriendAnime[index1];
+        console.log(element1);
+
+        if(myAnime[index] == myFriendAnime[index1]) {
+        
+            mutualAnime.push(myAnime[index]);
+        }
+      }
+        }
+     
+      // consoleفي ال mutualAnime اطبع
+      console.log(mutualAnime);
       // ودك تشوف اللستة المشتركة بينكم على الموقع؟
       // 🏃🏻‍♂️ ادخل على صفحة الموقع في المتصفح
 
@@ -39,6 +55,7 @@
           ul.appendChild(li);
           li.innerHTML += data;
           li.className = "listItem";
+        
         });
       }
       createList(mutualAnime);
